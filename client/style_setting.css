@@ -1,0 +1,62 @@
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap'); */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Alegreya Sans", sans-serif; */
+  /* font-family: 'Prompt', sans-serif; */
+  
+}
+
+h1{
+  color: white;
+}
+
+hr{
+  color: white;
+}
+
+body{
+  background-color: #343541;
+  overflow: hidden;
+}
+
+#prompt::placeholder {
+  color: rgb(143, 143, 143);
+}
+
+.darker{
+  background-color: #343541;
+  /* box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px; */
+}
+.lighter{
+  background-color: #444654;
+}
+
+.training-corpus-form-box,.update-corpus-form-box,.check-corpus-form-box{
+  padding:100px 0;
+  height: 100vh;
+}
+
+.navbar{
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+}
+
+.input-ce{
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  .sidebar{
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+    padding: 0;
+  }
+}
