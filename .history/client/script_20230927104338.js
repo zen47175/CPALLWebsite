@@ -68,7 +68,7 @@ function chatStripe(isAi, value, uniqueId) {
             <div class="chat">
                 <div class="profile">
                     <img 
-                      src=${isAi ? 'https://e7.pngegg.com/pngimages/791/512/png-clipart-user-profile-computer-icons-internet-bot-others-miscellaneous-monochrome.png' : 'https://upload.convolab.ai/rdprod-02%2F85d160f0-ae26-4a41-bafd-ce0f87124562.png'} 
+                      src=${isAi ? 'https://upload.convolab.ai/amitybotplus/img/bot.png' : 'https://upload.convolab.ai/amitybotplus/img/techsource.png'} 
                       alt="${isAi ? 'bot' : 'user'}" 
                     />
                 </div>

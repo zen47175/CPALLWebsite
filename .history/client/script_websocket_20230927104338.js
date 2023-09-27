@@ -1,5 +1,5 @@
 var ws;
-var wsUri = "wss://quiwsth.convolab.ai/linklogic/ws/chatgpt_websocketRD";
+var wsUri = "wss://quiwsth.convolab.ai/linklogic/ws/chatgpt_websocket";
 // var wsUri = "wss://presale.amitysolutions.com/linklogic/ws/asap";
 
 function wsConnect() {
@@ -63,8 +63,8 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 let corpus_id_param = params.corpus_id||"asc-001";
 let translate = params.translate||"true";
 let endpoint = params.endpoint||"botsplus"
-let welcome_message = params.welcome_message||"สวัสดีค่ะ หนูชื่อน้องอารี อยากพูดคุยเรื่องอะไรสามารถพิมพ์ได้ที่ช่องแชทด้านล่างเลย"
-let image_powerby = params.image_powerby||"https://inwfile.com/s-dz/plu2q4.png"
+let welcome_message = params.welcome_message||"สวัสดีครับ ผม Amity Solutions Bot อยากพูดคุยเรื่องอะไรสามารถพิมพ์ได้ที่ช่องแชทด้านล่างเลยครับ"
+let image_powerby = params.image_powerby||"https://uploads-ssl.webflow.com/63f6fd580c8340af034bd7a5/63ff1db240f8ce753781a7fa_amity-solutions-logo.svg"
 let session_id = generateUniqueId()
 console.log('Session ID : '+ session_id)
 let loadInterval
