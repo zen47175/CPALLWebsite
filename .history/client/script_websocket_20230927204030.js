@@ -116,7 +116,7 @@ function generateUniqueId() {
 
 function loader(element) {
     element.textContent = ''
-    element.style.fontSize = '2em';
+
     loadInterval = setInterval(() => {
         // Update the text content of the loading indicator
         element.textContent += '.';
@@ -135,7 +135,7 @@ function chatStripe(isAi, value, uniqueId) {
             <div class="${(isAi)?'chat':'chat-user'}">
                 <div class="profile ${(isAi)?'':'shadow-sm'}">
                     <img 
-                      src=${isAi ? 'https://upload.convolab.ai/rdprod-02%2F080defcc-1316-460d-9318-6258e83acd04.jpeg' : 'https://i.pinimg.com/originals/e2/7c/87/e27c8735da98ec6ccdcf12e258b26475.png'} 
+                      src=${isAi ? 'https://banner2.cleanpng.com/20180701/yig/kisspng-computer-icons-silhouette-my-account-icon-5b388d48343f50.355577991530432840214.jpg' : 'https://www.techopedia.com/wp-content/uploads/2023/03/6e13a6b3-28b6-454a-bef3-92d3d5529007.jpeg'} 
                       alt="${isAi ? 'bot' : 'user'}" 
                     />
                 </div>

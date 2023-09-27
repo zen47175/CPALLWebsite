@@ -116,7 +116,7 @@ function generateUniqueId() {
 
 function loader(element) {
     element.textContent = ''
-    element.style.fontSize = '2em';
+
     loadInterval = setInterval(() => {
         // Update the text content of the loading indicator
         element.textContent += '.';
