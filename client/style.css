@@ -43,33 +43,52 @@ body {
   background: #ffffff;
 }
 
+.column-separator {
+  width: 1px;
+  padding: 0;
+  position: relative;
+}
 
 .logo {
-  margin-right: 20px;
-  width: 15vw;
-  max-width: 100px;
+  margin-right: 0;
+  width: 140px;
   transition: width 0.3s ease-in-out; 
 }
 
+.logo-rd{
+  width: 140px;
+}
+.logo-amity{
+  width: 170px;
+}
+#footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+.label {
+  font-size: 12px;
+  margin: 0;
+  width: 100%;
+}
+
+.wrapper-logo {
+  display: flex;
+  padding: 0 1rem;
+  width: 100%;
+  align-items: center;
+}
+
 .separator {
-  height: 50px;
+  height: 25px;
   width: 1px;
   background-color: #000;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-
-@media (max-width: 600px) {
-  .separator {
-      height: 30px;
-  }
-  
-  .logo {
-      width: 25vw; 
-  }
-}
-
 
 .detail-footer{
   color: black;
@@ -151,19 +170,23 @@ body {
 }
 
 
-.separator {
-  height: 50px; 
-  width: 1px;
-  background-color: #000; 
-  display: inline-block; 
-  vertical-align: middle;
-  margin-right: 20px;
-}
-
 /* If you want the separator's height to be responsive */
 @media (max-width: 600px) {
+  #footer {
+    display: block;
+  }
   .separator {
-      height: 30px;
+      height: 20px;
+  }
+  .label {
+    display: block;
+    text-align: center;
+  }
+  .logo-rd{
+    width: 100px;
+  }
+  .logo-amity{
+    width: 130px;
   }
 }
 /* #1dc497 */
@@ -175,6 +198,7 @@ body {
   flex-direction: row;
   align-items: flex-start;
   gap: 40px;
+  align-items: center;
 }
 
 .chat-user {
