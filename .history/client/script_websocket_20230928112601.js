@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     const imagePowerbyDiv = document.getElementById("imagepowerby");
 
 // Add the first image
+// Add the first image
 imagePowerbyDiv.insertAdjacentHTML('beforeend', `<img src="${image_powerby}" class="logo">`);
 
 // Add a vertical separator

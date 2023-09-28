@@ -44,32 +44,9 @@ body {
 }
 
 
-.logo {
-  margin-right: 20px;
-  width: 15vw;
-  max-width: 100px;
-  transition: width 0.3s ease-in-out; 
+.logo{
+  width: 150px;
 }
-
-.separator {
-  height: 50px;
-  width: 1px;
-  background-color: #000;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 20px;
-}
-
-@media (max-width: 600px) {
-  .separator {
-      height: 30px;
-  }
-  
-  .logo {
-      width: 25vw; 
-  }
-}
-
 
 .detail-footer{
   color: black;
@@ -148,23 +125,6 @@ body {
   /* background: linear-gradient(to right,#1DC497,#1DC497); */
   background: linear-gradient(to right,#3EA3CB,#3EA3CB);
   border-radius: 10px;
-}
-
-
-.separator {
-  height: 50px; 
-  width: 1px;
-  background-color: #000; 
-  display: inline-block; 
-  vertical-align: middle;
-  margin-right: 20px;
-}
-
-/* If you want the separator's height to be responsive */
-@media (max-width: 600px) {
-  .separator {
-      height: 30px;
-  }
 }
 /* #1dc497 */
 .chat {
@@ -314,13 +274,7 @@ form img {
   .user{
     border-radius: 0px;
   }
-  .flex-container {
-    display: flex;
-    align-items: center;  /* Center align items vertically */
-    gap: 20px;  /* Space between child elements */
 }
-
-
-
-
+.right-margin {
+  margin-right: 20px;
 }

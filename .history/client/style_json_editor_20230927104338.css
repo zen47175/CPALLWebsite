@@ -119,10 +119,6 @@
   .input-ce{
     margin-right: 10px;
   }
-  .right-margin {
-    margin-right: 40px;
-}
-
   
   @media only screen and (max-width: 768px) {
     /* For desktop: */

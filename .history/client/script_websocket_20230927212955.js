@@ -64,8 +64,7 @@ let corpus_id_param = params.corpus_id||"asc-001";
 let translate = params.translate||"true";
 let endpoint = params.endpoint||"botsplus"
 let welcome_message = params.welcome_message||"สวัสดีค่ะ หนูชื่อน้องอารี เป้นเด็กฝึกหัดจากกรมสรรพากรนะค่ะ อยากพูดคุยเรื่องอะไรสามารถพิมพ์ได้ที่ช่องแชทด้านล่างเลย"
-let image_powerby = params.image_powerby || "https://inwfile.com/s-dz/plu2q4.png";
-let image_nextToPowerBy = params.image_nextToPowerBy || "https://uploads-ssl.webflow.com/63f6fd580c8340af034bd7a5/63ff1db240f8ce753781a7fa_amity-solutions-logo.svg";
+let image_powerby = params.image_powerby||"https://inwfile.com/s-dz/plu2q4.png"
 let session_id = generateUniqueId()
 console.log('Session ID : '+ session_id)
 let loadInterval
@@ -90,20 +89,8 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     // specific message div 
     const messageDiv = document.getElementById(uniqueId)
     typeText(messageDiv,welcome_message);
-    const imagePowerbyDiv = document.getElementById("imagepowerby");
-
-// Add the first image
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<img src="${image_powerby}" class="logo">`);
-
-// Add a vertical separator
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<div class="separator"></div>`);
-
-// Add the second image inside a clickable link
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<a href="https://www.amitysolutions.com/th" target="_blank"><img src="${image_nextToPowerBy}" class="logo"></a>`);
-
-
-
-    
+    const imagePowerbyDiv = document.getElementById("imagepowerby")
+    imagePowerbyDiv.innerHTML += `<img src="${image_powerby}" class="logo"></img>`
     
 });
 
@@ -144,21 +131,22 @@ function loader(element) {
 function chatStripe(isAi, value, uniqueId) {
     return (
         `
-        <div class="wrapper ${(isAi)?'ai lighter shadow-sm':'user darker shadow-sm '}">
-            <div class="${(isAi)?'chat':'chat-user'}">
-                <div class="profile ${(isAi)?'':'shadow-sm'}">
+        <div class="wrapper ${isAi ? 'ai lighter shadow-sm' : 'user'}" ${!isAi ? 'style="background-color: #3EA3CB;"' : ''}>  <!-- Conditional styling for the user's wrapper -->
+            <div class="${isAi ? 'chat' : 'chat-user'}">
+                <div class="profile ${isAi ? '' : 'shadow-sm'}">
                     <img 
                       src=${isAi ? 'https://upload.convolab.ai/rdprod-02%2F080defcc-1316-460d-9318-6258e83acd04.jpeg' : 'https://i.pinimg.com/originals/e2/7c/87/e27c8735da98ec6ccdcf12e258b26475.png'} 
                       alt="${isAi ? 'bot' : 'user'}" 
-                      ${isAi ? 'style="transform: scale(1.5);"' : ''}  // Added this line for inline zoom effect
+                      ${isAi ? 'style="transform: scale(1.5);"' : ''}
                     />
                 </div>
-                <div class="message${(isAi)?'-bot':''}" id="${uniqueId}">${value}</div>
+                <div class="message${isAi ? '-bot' : ''}" id="${uniqueId}">${value}</div>
             </div>
         </div>
     `
     )
 }
+
 
 
 

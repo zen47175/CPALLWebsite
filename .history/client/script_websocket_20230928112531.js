@@ -93,13 +93,13 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     const imagePowerbyDiv = document.getElementById("imagepowerby");
 
 // Add the first image
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<img src="${image_powerby}" class="logo">`);
+imagePowerbyDiv.innerHTML += `<img src="${image_powerby}" class="logo">`;
 
 // Add a vertical separator
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<div class="separator"></div>`);
+imagePowerbyDiv.innerHTML += `<div class="separator"></div>`;
 
 // Add the second image inside a clickable link
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<a href="https://www.amitysolutions.com/th" target="_blank"><img src="${image_nextToPowerBy}" class="logo"></a>`);
+imagePowerbyDiv.innerHTML += `<a href="https://www.amitysolutions.com/th" target="_blank"><img src="${image_nextToPowerBy}" class="logo"></a>`;
 
 
 

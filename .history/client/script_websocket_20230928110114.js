@@ -64,8 +64,8 @@ let corpus_id_param = params.corpus_id||"asc-001";
 let translate = params.translate||"true";
 let endpoint = params.endpoint||"botsplus"
 let welcome_message = params.welcome_message||"สวัสดีค่ะ หนูชื่อน้องอารี เป้นเด็กฝึกหัดจากกรมสรรพากรนะค่ะ อยากพูดคุยเรื่องอะไรสามารถพิมพ์ได้ที่ช่องแชทด้านล่างเลย"
-let image_powerby = params.image_powerby || "https://inwfile.com/s-dz/plu2q4.png";
-let image_nextToPowerBy = params.image_nextToPowerBy || "https://uploads-ssl.webflow.com/63f6fd580c8340af034bd7a5/63ff1db240f8ce753781a7fa_amity-solutions-logo.svg";
+let image_powerby = params.image_powerby||"https://inwfile.com/s-dz/plu2q4.png"
+let image_nextToPowerBy = params.image_nextToPowerBy||"https://uploads-ssl.webflow.com/63f6fd580c8340af034bd7a5/63ff1db240f8ce753781a7fa_amity-solutions-logo.svg"
 let session_id = generateUniqueId()
 console.log('Session ID : '+ session_id)
 let loadInterval
@@ -92,15 +92,58 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     typeText(messageDiv,welcome_message);
     const imagePowerbyDiv = document.getElementById("imagepowerby");
 
-// Add the first image
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<img src="${image_powerby}" class="logo">`);
-
-// Add a vertical separator
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<div class="separator"></div>`);
-
-// Add the second image inside a clickable link
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<a href="https://www.amitysolutions.com/th" target="_blank"><img src="${image_nextToPowerBy}" class="logo"></a>`);
-
+    // Create a flex container
+    const flexContainer = document.createElement('div');
+    flexContainer.style.display = 'flex';
+    flexContainer.style.alignItems = 'center';
+    flexContainer.style.gap = '20px';
+    
+    // First Image
+    const img1 = document.createElement('img');
+    img1.src = image_powerby;
+    img1.className = 'logo';
+    img1.style.width = '100px';
+    img1.style.height = 'auto';
+    img1.style.transition = 'width 0.3s';
+    img1.style.maxWidth = '100%'; // ensures image doesn't overflow its container on small screens
+    flexContainer.appendChild(img1);
+    
+    // Vertical Separator
+    const separator = document.createElement('div');
+    separator.style.height = '50px';
+    separator.style.width = '1px';
+    separator.style.backgroundColor = '#000';
+    flexContainer.appendChild(separator);
+    
+    // Second Image inside a clickable link
+    const link = document.createElement('a');
+    link.href = 'https://www.amitysolutions.com/th';
+    link.target = '_blank';
+    const img2 = document.createElement('img');
+    img2.src = image_nextToPowerBy;
+    img2.className = 'logo';
+    img2.style.width = '100px';
+    img2.style.height = 'auto';
+    img2.style.transition = 'width 0.3s';
+    img2.style.maxWidth = '100%'; // ensures image doesn't overflow its container on small screens
+    link.appendChild(img2);
+    flexContainer.appendChild(link);
+    
+    // Appending the flex container to imagePowerbyDiv
+    imagePowerbyDiv.appendChild(flexContainer);
+    
+    // Add an event listener to resize images when the window resizes
+    window.addEventListener('resize', function() {
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+        if (viewportWidth <= 480) {
+            img1.style.width = '70px';
+            img2.style.width = '70px';
+        } else {
+            img1.style.width = '100px';
+            img2.style.width = '100px';
+        }
+    });
+    
 
 
     

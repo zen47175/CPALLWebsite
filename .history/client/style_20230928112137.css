@@ -48,28 +48,7 @@ body {
   margin-right: 20px;
   width: 15vw;
   max-width: 100px;
-  transition: width 0.3s ease-in-out; 
 }
-
-.separator {
-  height: 50px;
-  width: 1px;
-  background-color: #000;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 20px;
-}
-
-@media (max-width: 600px) {
-  .separator {
-      height: 30px;
-  }
-  
-  .logo {
-      width: 25vw; 
-  }
-}
-
 
 .detail-footer{
   color: black;

@@ -64,8 +64,8 @@ let corpus_id_param = params.corpus_id||"asc-001";
 let translate = params.translate||"true";
 let endpoint = params.endpoint||"botsplus"
 let welcome_message = params.welcome_message||"สวัสดีค่ะ หนูชื่อน้องอารี เป้นเด็กฝึกหัดจากกรมสรรพากรนะค่ะ อยากพูดคุยเรื่องอะไรสามารถพิมพ์ได้ที่ช่องแชทด้านล่างเลย"
-let image_powerby = params.image_powerby || "https://inwfile.com/s-dz/plu2q4.png";
-let image_nextToPowerBy = params.image_nextToPowerBy || "https://uploads-ssl.webflow.com/63f6fd580c8340af034bd7a5/63ff1db240f8ce753781a7fa_amity-solutions-logo.svg";
+let image_powerby = params.image_powerby||"https://inwfile.com/s-dz/plu2q4.png"
+let image_nextToPowerBy = params.image_nextToPowerBy||"https://uploads-ssl.webflow.com/63f6fd580c8340af034bd7a5/63ff1db240f8ce753781a7fa_amity-solutions-logo.svg"
 let session_id = generateUniqueId()
 console.log('Session ID : '+ session_id)
 let loadInterval
@@ -90,17 +90,15 @@ document.addEventListener("DOMContentLoaded", async function(event) {
     // specific message div 
     const messageDiv = document.getElementById(uniqueId)
     typeText(messageDiv,welcome_message);
-    const imagePowerbyDiv = document.getElementById("imagepowerby");
+    const imagePowerbyDiv = document.getElementById("imagepowerby")
+// Add the first image with a right margin using inline styles
+imagePowerbyDiv.innerHTML += `<img src="${image_powerby}" class="logo" style="margin-right: 20px;"></img>`;
 
-// Add the first image
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<img src="${image_powerby}" class="logo">`);
-
-// Add a vertical separator
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<div class="separator"></div>`);
+// Add a vertical separator with a height of the images (you can adjust as necessary) and a right margin
+imagePowerbyDiv.innerHTML += `<div style="height: 50px; width: 1px; background-color: #000; display: inline-block; vertical-align: middle; margin-right: 20px;"></div>`;  // Adjust the height as necessary
 
 // Add the second image inside a clickable link
-imagePowerbyDiv.insertAdjacentHTML('beforeend', `<a href="https://www.amitysolutions.com/th" target="_blank"><img src="${image_nextToPowerBy}" class="logo"></a>`);
-
+imagePowerbyDiv.innerHTML += `<a href="https://www.amitysolutions.com/th" target="_blank"><img src="${image_nextToPowerBy}" class="logo"></a>`;
 
 
     
