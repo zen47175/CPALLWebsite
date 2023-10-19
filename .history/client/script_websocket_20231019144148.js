@@ -1,5 +1,5 @@
 var ws;
-var wsUri = "wss://quiwsth.convolab.ai/linklogic/ws/chatgpt_websocketTrueIDC";
+var wsUri = "wss://quiwsth.convolab.ai/linklogic/ws/chatgpt_websocketRD";
 // var wsUri = "wss://presale.amitysolutions.com/linklogic/ws/asap";
 
 function wsConnect() {

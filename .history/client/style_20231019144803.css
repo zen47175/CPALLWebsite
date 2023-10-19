@@ -165,7 +165,7 @@ body {
 
 .user{
   /* background: linear-gradient(to right,#1DC497,#1DC497); */
-  background: linear-gradient(to right, rgb(237,28,35), rgb(124,126,127));
+  background: linear-gradient(to right,#3EA3CB,#3EA3CB);
   border-radius: 10px;
 }
 
@@ -176,15 +176,8 @@ body {
     display: block;
   }
   .separator {
-    height: 25px;
-    width: 1px;
-    background-color: #000;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 10px;
-    margin-left: 10px;
+      height: 20px;
   }
-
   .label {
     display: block;
     text-align: center;

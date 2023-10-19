@@ -165,7 +165,7 @@ body {
 
 .user{
   /* background: linear-gradient(to right,#1DC497,#1DC497); */
-  background: linear-gradient(to right, rgb(237,28,35), rgb(124,126,127));
+  background: linear-gradient(to right,  rgb(124,126,127,rgb(237,28,35)));
   border-radius: 10px;
 }
 
