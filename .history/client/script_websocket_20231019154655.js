@@ -1,5 +1,5 @@
 var ws;
-var wsUri = "wss://quiwsth.convolab.ai/linklogic/ws/chatgpt_websocketCPALL";
+var wsUri = "wss://quiwsth.convolab.ai/linklogic/ws/chatgpt_websocketTrueIDC";
 // var wsUri = "wss://presale.amitysolutions.com/linklogic/ws/asap";
 
 function wsConnect() {
@@ -65,7 +65,7 @@ let translate = params.translate || "true";
 let endpoint = params.endpoint || "botsplus";
 let welcome_message =
   params.welcome_message ||
-  "สวัสดีค่ะ หนูชื่อน้อง​ 7 Eleven เป็นเด็กฝึกหัดจาก 7 Eleven นะค่ะ อยากพูดคุยเรื่องอะไรสามารถพิมพ์ได้ที่ช่องแชทด้านล่างเลย";
+  "สวัสดีค่ะ หนูชื่อน้อง​ 7 Eleven เป้นเด็กฝึกหัดจาก 7 Eleven นะค่ะ อยากพูดคุยเรื่องอะไรสามารถพิมพ์ได้ที่ช่องแชทด้านล่างเลย";
 let session_id = generateUniqueId();
 console.log("Session ID : " + session_id);
 let loadInterval;
@@ -135,8 +135,8 @@ function chatStripe(isAi, value, uniqueId) {
                     <img 
                       src=${
                         isAi
-                          ? "https://www.cpall.co.th/wp-content/uploads/2021/09/cpalllogo.png"
-                          : "https://sleteam.s3.ap-southeast-1.amazonaws.com/CPALLWebsite/Group+565+(2).png"
+                          ? "https://scontent.fbkk22-3.fna.fbcdn.net/v/t39.30808-6/347555128_1267016670882337_900223370956789748_n.png?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGmfoL8L-Sl02benHBjjleW7kgOmjaZCYruSA6aNpkJihDFnwsNGnZhM_9ZDMiSZ4T4qsd057Y-UDt_JpoRPwsg&_nc_ohc=yTVpe2FfVpwAX8RkHP2&_nc_ht=scontent.fbkk22-3.fna&oh=00_AfClB8YHPBeqZqOHdJl2ygEgLhbNjXv52Vx4FwYOoDAPeg&oe=653504C5"
+                          : "https://i.pinimg.com/originals/e2/7c/87/e27c8735da98ec6ccdcf12e258b26475.png"
                       } 
                       alt="${isAi ? "bot" : "user"}" 
                       ${

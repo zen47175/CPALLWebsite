@@ -135,8 +135,8 @@ function chatStripe(isAi, value, uniqueId) {
                     <img 
                       src=${
                         isAi
-                          ? "https://www.cpall.co.th/wp-content/uploads/2021/09/cpalllogo.png"
-                          : "https://sleteam.s3.ap-southeast-1.amazonaws.com/CPALLWebsite/Group+565+(2).png"
+                          ? "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/7-eleven_logo.svg/1055px-7-eleven_logo.svg.png"
+                          : "https://i.pinimg.com/originals/e2/7c/87/e27c8735da98ec6ccdcf12e258b26475.png"
                       } 
                       alt="${isAi ? "bot" : "user"}" 
                       ${
